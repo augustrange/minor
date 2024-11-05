@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DOM JS: Считывание данных</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="задачка.html">Алгоритмическая задача</a></li>
+            <li><a href="dom_js.html"><b>DOM JS</b></a></li>
+            <li><a href="change_passport.html">Изменение данных</a></li>
+            <li><a href="https://electives.hse.ru/minor_programming_spb/" target="_blank">Внешний сайт</a></li>
+            <li><a href="table.html">Таблица</a></li>
+            <li><a href="contact.html">Контакт</a></li>
+            <li><a href="pasport.html">Паспорт</a></li>
+            <li><a href="DOM.html">DOM</a></li>
+        </ul>
+    </nav>
+
+    <h1>DOM JS: Считывание и изменение информации</h1>
+    
+    <p>Информация из второй и третьей страниц паспорта:</p>
+    <p>Фамилия: Нурсеитова</p>
+    <p>Имя: Дарина</p>
+    <p>Год рождения: <span id="birthYear">2004</span></p>
+
+    <button id="getDataButton">Считать данные для изменения</button>
+    <button id="changeYearButton">Изменить год рождения</button>
+
+    <p id="domResult"></p>
+
+        <script src="scripts/dom_interaction.js"></script>
+</body>
+</html>
+

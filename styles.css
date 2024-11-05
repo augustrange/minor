@@ -1,0 +1,345 @@
+/* Основной стиль для body */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background-color: #ebebeb; /* Светлый фон */
+    color: #1f3423; /* Цвет текста по умолчанию */
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+/* Навигационная панель */
+nav {
+    background-color: #ebebeb; /* Фон навигации */
+    padding: 40px 0; /* Отступы сверху и снизу */
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* Стили для списка навигации */
+nav ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex; /* Горизонтальное расположение */
+}
+
+/* Элементы списка навигации */
+nav li {
+    margin: 0 15px;
+    position: relative;
+}
+
+/* Ссылки навигации */
+nav a {
+    color: #1f3423; /* Цвет текста */
+    text-decoration: none;
+    font-weight: thin;
+    padding: 10px 19px; /* Увеличиваем отступы для овальной формы */
+    position: relative;
+    background-color: #1f3423; /* Темно-зеленая заливка фона внутри обводки */
+    border-radius: 25px; /* Большой радиус для овальной формы */
+    transition: color 0.3s;
+    z-index: 1; /* Поверх псевдоэлементов */
+    /* Вместо фиксированной ширины */
+    max-width: 100%; /* или конкретное значение, например, 150px */
+    width: auto; /* позволяет гибко подстраиваться под контент */
+}
+
+/* Псевдоэлемент для овальной градиентной обводки */
+nav a::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 30px; 
+    background: linear-gradient(to right, 
+        #2b6a4a 0%, 
+        #388f63 25%,
+        #46ac79 40%,
+        #50c188 55%, 
+        #56e89f 80%, 
+        #6cffb5 85%,
+        #2b6a4a 100%);
+    z-index: -1;
+}
+
+
+/* Эффект при наведении */
+nav a:hover {
+    color: #bcbcbc; /* Мягкий серый цвет текста при наведении */
+}
+
+/* Основные стили для .top-nav навигации */
+.top-nav {
+    background-color: #9bcdb0; /* Фон для навигационной панели */
+    padding: 15px 20px; /* Отступы внутри панели */
+    display: flex;
+    justify-content: flex-end; /* Выровнять элементы по правому краю */
+}
+
+/* Стили для ссылок внутри .top-nav */
+.top-nav a {
+    color: #ffffff; /* Цвет текста слоновой кости */
+    text-decoration: none;
+    font-weight: thin;
+    padding: 13px 20px; /* Просторные отступы */
+    background-color: #2b6a4a; /* Однотонный зеденый фон */
+    border-radius: 30px; /* Овальная форма */
+    margin: 0 10px; /* Отступ между ссылками */
+    transition: color 0.3s;
+}
+
+/* Эффект при наведении для ссылок */
+.top-nav a:hover {
+    color: #b3b3b3; /* Мягкий серый при наведении */
+}
+
+
+nav ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    display: flex; /* Используем flexbox для горизонтального расположения */
+    justify-content: center; /* Центрируем элементы */
+}
+
+nav ul li {
+    margin: 0 3px; /* Отступы между элементами навигации */
+}
+
+nav ul li a {
+    color: white; /* Цвет ссылок */
+    min-width: unset;
+    min-height: unset;
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s; /* Плавный переход при наведении */
+}
+
+nav ul li a:hover {
+    color: #919191; /* Цвет ссылок при наведении */
+}
+
+/* Стиль заголовков */
+h1, h3 {
+    text-align: center; /* Центрируем заголовки */
+    color: #1f3423; /* Цвет заголовков */
+}
+
+/* Стили для изображений */
+.image-links img, .album img {
+    margin: 5px; /* Отступы между изображениями */
+    border: 1px solid #ccc; /* Обводка вокруг изображений */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+/* Форма */
+form {
+    background: #fff; /* Белый фон для формы */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для формы */
+    margin: 20px auto; /* Центрируем форму */
+    max-width: 400px; /* Максимальная ширина формы */
+}
+
+form label {
+    display: block; /* Каждый label на новой строке */
+    margin-bottom: 5px; /* Отступ снизу */
+}
+
+form input {
+    width: 100%; /* Ширина полей ввода */
+    padding: 10px; /* Внутренние отступы */
+    margin-bottom: 10px; /* Отступы между полями ввода */
+    border: 1px solid #ccc; /* Обводка вокруг полей ввода */
+    border-radius: 4px; /* Закругленные углы */
+}
+
+form button {
+    background: #333; /* Цвет кнопки */
+    color: white; /* Цвет текста на кнопке */
+    border: none; /* Убираем обводку */
+    padding: 10px 15px; /* Внутренние отступы */
+    border-radius: 4px; /* Закругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background 0.3s; /* Плавный переход цвета */
+}
+
+form button:hover {
+    background: #7b7a7a; /* Цвет кнопки при наведении */
+}
+
+/* Стили для кнопки "К началу страницы" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;  /* Установите размер изображения по необходимости */
+    height: 50px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top img {
+    width: 100%;  /* Изображение масштабируется под кнопку */
+    height: 100%;
+}
+
+/* Эффект при наведении */
+.back-to-top:hover img {
+    opacity: 0.8; /* Легкий эффект затемнения */
+}
+
+
+
+/* Альбом изображений */
+.album {
+    display: flex; /* Flexbox для расположения изображений */
+    flex-wrap: wrap; /* Перенос изображений на новую строку */
+    justify-content: center; /* Центрируем изображения */
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%; /* Полная ширина таблицы */
+    border-collapse: collapse; /* Убираем отступы между ячейками */
+}
+
+th, td {
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid hsl(0, 0%, 1%); /* Обводка ячеек */
+    text-align: left; /* Выравнивание текста */
+    
+}
+
+th {
+    background: #d4d0d0; /* Цвет фона заголовка таблицы */
+}
+
+
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+#main_fon{
+
+	height: 734px;
+	background-image:url(images/fon.jpg);
+	background-repeat: no-repeat;
+}
+
+#pass_title{
+	padding-top: 41px;
+	padding-left: 74px;
+}
+
+.poiret-one-regular {
+  font-family: "Times New Roman", sans-serif;
+  letter-spacing: 0.8em;
+  word-spacing: 0.25em;
+}
+
+
+.vidanstr1{
+	font-family: 'Times New Roman';
+	padding-top: 20px;
+	padding-left: 200px;
+}
+
+.vidanstr2{
+	font-family: 'Times New Roman';
+	padding-top: 10px;
+	padding-left: 200px;
+	word-spacing: 0.65em;
+}
+
+.vidanstrdata{
+	font-family: 'Times New Roman';
+	padding-top: 37px;
+	padding-left: 105px;
+	word-spacing: 0.65em;
+	float: left;
+}
+
+.vidanstrcode{
+	font-family: 'Times New Roman';
+	padding-top: 39px;
+	padding-left: 295px;
+	word-spacing: 0.65em;
+}
+
+.podpis{
+	padding-top: 30px;
+	padding-left: 55px;
+	float: left;
+}
+
+.podpis1{
+	padding-top: 50px;
+	padding-left: 115px;
+}
+
+.passfoto{
+	padding-top: 140px;
+	padding-left: 32px;
+	float: left;
+}
+
+.hfamilia{
+	padding-top: 104px;
+	padding-left: 250px;
+}
+
+.hname{
+	padding-top: 37px;
+	padding-left: 250px;
+}
+
+.hfname{
+	padding-top: 10px;
+	padding-left: 250px;
+}
+
+.hpol{
+	padding-top: 10px;
+	padding-left: 35px;
+	float: left;
+}
+
+.hborn{
+	padding-top: 10px;
+	padding-left: 310px;
+}
+
+.hpborn1{
+	padding-top: 8px;
+	padding-left:255px;
+	word-spacing: 0.7em;
+}
+
+li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left : 10px;
+  }
+
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}

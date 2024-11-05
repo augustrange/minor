@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Квадратный Брус</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="задачка.html"><b>Алгоритмическая задача</b></a></li>
+            <li><a href="dom_js.html">DOM JS</a></li>
+            <li><a href="change_passport.html">Изменение данных</a></li>
+            <li><a href="https://electives.hse.ru/minor_programming_spb/" target="_blank">Внешний сайт</a></li>
+            <li><a href="table.html">Таблица</a></li>
+            <li><a href="contact.html">Контакт</a></li>
+            <li><a href="pasport.html">Паспорт</a></li>
+            <li><a href="DOM.html">DOM</a></li>
+        </ul>
+    </nav>
+    <p align="center">Можно ли из бревна с диаметром D выпилить квадратный брус шириной A?</p>
+    <form action="https://www.bing.com/search?" id="woodForm">  
+        <p>Диаметр D: <input id="diameter" name="diameter" type="number" value="10"></p>
+        <p>Ширина A: <input id="width" name="width" type="number" value="5"></p>
+        <p>Результат: <input id="result" name="result" value="не определен" readonly></p>
+        <input type="button" value="Проверить" onclick="checkDimensions()">
+        <input type="submit" value="Отправить данные"> 
+    </form>
+
+    <script>
+        function checkDimensions() {
+            let diameter = parseFloat(document.getElementById('diameter').value);
+            let width = parseFloat(document.getElementById('width').value);
+            let result = document.getElementById('result');
+
+            // Параметры для проверки
+            let canCut = width <= diameter;
+
+            // Вывод результата
+            if (canCut) {
+                result.value = "Да, можно выпилить.";
+            } else {
+                result.value = "Нет, нельзя выпилить.";
+            }
+        }
+    </script>
+
+</body>
+</html>
+

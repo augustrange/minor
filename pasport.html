@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf8">
+	<title>Паспорт</title>
+	<link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Poiret+One&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="задачка.html">Алгоритмическая задача</a></li>
+            <li><a href="dom_js.html">DOM JS</a></li>
+            <li><a href="change_passport.html">Изменение данных</a></li>
+            <li><a href="https://electives.hse.ru/minor_programming_spb/" target="_blank">Внешний сайт</a></li>
+            <li><a href="table.html">Таблица</a></li>
+            <li><a href="contact.html">Контакт</a></li>
+            <li><a href="pasport.html"><b>Паспорт</b></a></li>
+            <li><a href="DOM.html">DOM</a></li>
+        </ul>
+    </nav>
+
+<h1>Паспорт</h1>
+<div id="main_fon">
+
+	<h5 id="pass_title" class="poiret-one-regular">РОССИЙСКАЯ ФЕДЕРАЦИЯ</h5>
+	<div id="page_top">
+		<p class="vidanstr1">ГУ МВД РОССИИ</p>
+		<p class="vidanstr2">ПО Г. МОСКВЕ</p>
+		<p class="vidanstrdata">16.08.2023</p>
+		<p class="vidanstrcode">630-002</p>
+		<img class="podpis" src="images/podpis1.png">
+		<img class="podpis1" src="images/podpis.png">
+	</div>
+
+	<div id="page_bottom">
+		<img class="passfoto" src="images/girl.jpg" width="170" height= "315">
+		<p class="hfamilia">НУРСЕИТОВА</p>
+		<p class="hname">ДАРИНА</p>
+		<p class="hfname">-</p>
+		<p class="hpol">ЖЕН.</p>
+		<p class="hborn">19.08.2004</p>
+		<p class="hpborn1">ГОРОД МОСКВА</p>
+	</div>
+
+</div>
+</body>
+</html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Форма для отправки паспортных данных</title>
+</head>
+
+<body>
+    <h3 align="center">Форма для отправки паспортных данных</h3>
+
+    <form action="https://www.bing.com/search?" method="POST" target="_blank">
+        <p>Фамилия: <input type="text" name="passport_last_name" value="Нурсеитова"></p>
+        <p>Имя: <input type="text" name="passport_first_name" value="Дарина"></p>
+        <p>Отчество: <input type="text" name="passport_middle_name" value="-"></p>
+        <p>Код подразделения: <input type="text" name="code" value="630-002"></p>
+        <p>Дата выдачи: <input type="date" name="issue_date" value="2024-10-30"></p>
+        <p>Орган, выдавший паспорт: <input type="text" name="issued_by" value="ГУ МВД России"></p>
+        <p>Место рождения: <input type="text" name="born_place" value="Город Москва"></p>
+        <input type="hidden" name="document_type" value="passport">
+        <p><input type="submit" value="Отправить данные паспорта"></p>
+    </form>
+</body>
+</html>

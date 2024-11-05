@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>DOM_JS. Считываем информацию из DOM</title>
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="задачка.html">Алгоритмическая задача</a></li>
+            <li><a href="dom_js.html">DOM JS</a></li>
+            <li><a href="change_passport.html">Изменение данных</a></li>
+            <li><a href="https://electives.hse.ru/minor_programming_spb/" target="_blank">Внешний сайт</a></li>
+            <li><a href="table.html">Таблица</a></li>
+            <li><a href="contact.html">Контакт</a></li>
+            <li><a href="pasport.html">Паспорт</a></li>
+            <li><a href="DOM.html"><b>DOM</b></a></li>
+        </ul>
+    </nav>
+
+    <h1>Личные данные паспорта</h1>
+    
+    <p>Фамилия: <span id="lastName">Нурсеитова</span></p>
+    <p>Имя: <span id="firstName">Дарина</span></p>
+    <p>Год рождения: <span id="birthYear">2004</span></p>
+        
+    <button id="getInfoBtn">Получить информацию из DOM</button>
+        
+    <div id="info"></div>
+
+
+    <script>
+        document.getElementById('getInfoBtn').addEventListener('click', function() {
+            // Считываем информацию из DOM
+            var lastName = document.getElementById('lastName').innerText;
+            var firstName = document.getElementById('firstName').innerText;
+            var birthYear = document.getElementById('birthYear').innerText;
+
+            // Отображаем информацию в div
+            var infoDiv = document.getElementById('info');
+            infoDiv.innerHTML = `<strong>Считанная информация:</strong><br>
+                                 Фамилия: ${lastName}<br>
+                                 Имя: ${firstName}<br>
+                                 Год рождения: ${birthYear}`;
+        });
+    </script>
+
+
+
+    <img src="images/консоль.png" width="768" height="386" alt="Открыть изображение">
+
+</body>
+</html>

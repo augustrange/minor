@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Форма для отправки контактных данных</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="задачка.html">Алгоритмическая задача</a></li>
+            <li><a href="dom_js.html">DOM JS</a></li>
+            <li><a href="change_passport.html">Изменение данных</a></li>
+            <li><a href="https://electives.hse.ru/minor_programming_spb/" target="_blank">Внешний сайт</a></li>
+            <li><a href="table.html">Таблица</a></li>
+            <li><a href="contact.html"><b>Контакт</b></a></li>
+            <li><a href="pasport.html">Паспорт</a></li>
+            <li><a href="DOM.html">DOM</a></li>
+        </ul>
+    </nav>
+    <h3 align="center">Форма для бронирования номера</h3>
+
+    <!-- Форма для заказа услуги -->
+    <form action="https://www.bing.com/search?" method="POST" target="_blank">
+        <p>Фамилия: <input type="text" name="last_name" size="20" value="Валерьянова"></p>
+        <p>Имя: <input type="text" name="first_name" size="20" value="Валерия"></p>
+        <p>Телефон: <input type="tel" name="phone" size="15" value="+79161234567"></p>
+        <p>Название услуги: <input type="text" name="product_name" value="Двухместный номер"></p>
+        <p>Количество: <input type="number" name="quantity" value="1"></p>
+        <p>Способ оплаты:
+            <table>
+                <tr>
+                    <td>Карта</td>
+                    <td><input type="radio" name="payment_method" value="card" checked></td>
+                </tr>
+                <tr>
+                    <td>Наличные</td>
+                    <td><input type="radio" name="payment_method" value="cash"></td>
+                </tr>
+                </table>
+        </p>
+
+        <p>Скидка:
+            <table>
+                <tr>
+                    <td>10%</td>
+                    <td><input type="checkbox" name="discount" value="10%"></td>
+                </tr>
+                <tr>
+                    <td>20%</td>
+                    <td><input type="checkbox" name="discount" value="20%"></td>
+                </tr>
+            </table>
+        </p>
+
+        <p>Дата въезда: <input type="date" name="order_date" value="2024-11-28"></p>
+        <input type="hidden" name="order_id" value="123456">
+        <p><input type="submit" value="Забронировать"></p>
+    </form>
+</body>
+</html>
